@@ -4,9 +4,6 @@ export default class Bedding_set_page {
 
     page: Page;
 
-    private _favoritesButton = () => this.page.getByLabel('Избранное');
-    private _sizing = () => this.page.locator('.UCL74 > .ui-MYNhR > div > .ui-K6eTE > .ui-ZttOm');
-    private _euroSet = () => this.page.getByRole('link', {name: 'евро', exact: true}).nth(1);
     private _shoppingCartButton = () => this.page.getByLabel('Корзина');
     private _addRelatedProduct = () => this.page.getByText('Добавить:');
     private _additionalProduct = () => this.page.locator('.vqM8d > .PKaz8 > .ui-oyu-F').first();
@@ -14,22 +11,13 @@ export default class Bedding_set_page {
     private _plus = () => this.page.getByTestId('plus').nth(1);
     private _minus = () => this.page.getByTestId('minus').nth(1);
     private _addToCart = () => this.page.getByTestId('sidebar-buy-button');
+    private _notifyOfAvailability = () => this.page.getByRole('button', { name: 'Уведомить о наличии' });
+
+
 
 
     constructor(page: Page) {
         this.page = page;
-    }
-
-    get favoritesButton(): () => any {
-        return this._favoritesButton;
-    }
-
-    get sizing(): () => any {
-        return this._sizing;
-    }
-
-    get euroSet(): () => any {
-        return this._euroSet;
     }
 
     get shoppingCartButton(): () => any {
@@ -60,4 +48,9 @@ export default class Bedding_set_page {
     get addToCart(): () => any {
         return this._addToCart;
     }
+
+    get notifyOfAvailability(): () => any {
+        return this._notifyOfAvailability;
+    }
+
 }

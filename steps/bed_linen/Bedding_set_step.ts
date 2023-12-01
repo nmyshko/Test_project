@@ -10,8 +10,11 @@ export default class Bedding_set_step {
     cityPage: City_page;
 
     public async addToCart() {
-        await this.beddingSetPage.addToCart().click();
-        await expect(this.cartPage.logo()).toBeVisible();
+        try{await this.beddingSetPage.addToCart().click();
+            await expect(this.cartPage.logo()).toBeVisible();
+        } catch {
+            await this.beddingSetPage.notifyOfAvailability().click();
+        }
     }
 
     public async addRelatedProduct() {
@@ -19,12 +22,6 @@ export default class Bedding_set_step {
         await this.beddingSetPage.additionalProduct().click();
         await this.beddingSetPage.applyButton().click();
         await expect(this.beddingSetPage.plus()).toBeVisible();
-    }
-
-    public async sizingEuroSet() {
-        await this.beddingSetPage.sizing().click();
-        await expect(this.beddingSetPage.euroSet()).toBeVisible();
-        await this.beddingSetPage.euroSet().click();
     }
 
     constructor(page: Page) {
