@@ -1,0 +1,25 @@
+Functional testing checklist
+
+1. The site https://www.divan.ru/vladimir/product/komplekt-postelnogo-belya-lejk-2-0-beige opens correctly and is accessible.
+2. Re-opening the site is smooth.
+3. All buttons on the site are responsive
+4. All links on the site go to the appropriate pages.
+5. There are no broken links.
+6. All web forms on the site are checked.
+7. Optional fields pass validation.
+8. The main elements of the site are functioning smoothly.
+9. The navigation menu works correctly.
+10. Forms are submitted without errors.
+11. Site behavior when cookies are deleted is checked.
+12. The site's response to deleting cookies after a visit is also tested.
+
+Checklist for testing the layout
+
+1.	UTF-8 encoding is used.
+2.	Fonts are successfully downloaded and displayed.
+3.	No HTML and CSS errors were detected.
+4.	Web page elements are displayed correctly on different screen resolutions.
+5.	The layout of forms adapts when the window size changes.
+6.	The layout is adapted for different web browsers.
+7.	There are no numerous comments in the code.
+8.	The site has a favicon.
