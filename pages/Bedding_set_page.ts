@@ -11,9 +11,7 @@ export default class Bedding_set_page {
     private _plus = () => this.page.getByTestId('plus').nth(1);
     private _minus = () => this.page.getByTestId('minus').nth(1);
     private _addToCart = () => this.page.getByTestId('sidebar-buy-button');
-    private _notifyOfAvailability = () => this.page.getByRole('button', { name: 'Уведомить о наличии' });
-
-
+    private _notifyOfAvailability = () => this.page.getByRole('button', {name: 'Уведомить о наличии'});
 
 
     constructor(page: Page) {
@@ -52,5 +50,4 @@ export default class Bedding_set_page {
     get notifyOfAvailability(): () => any {
         return this._notifyOfAvailability;
     }
-
 }
